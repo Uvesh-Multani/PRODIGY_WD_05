@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+}
+
+.container {
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  margin: 4rem auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather__search {
+  position: relative;
+}
+
+.weather__searchform {
+  border: none;
+  background-color: #444;
+  outline: none;
+  padding: 0.5rem 2.5rem;
+  border-radius: 25px;
+  color: #fff;
+  font: inherit;
+  width: 100%;
+}
+
+.weather__searchform::placeholder {
+  color: #bbb;
+}
+
+.weather__search i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #bbb;
+}
+
+.weather__units {
+  font-size: 1.2rem;
+}
+
+.weather__units span {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.weather__units span:first-child {
+  margin-left: 0;
+}
+
+.weather__body {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.weather__forecast {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  background: #444;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.weather__icon img {
+  width: 120px;
+}
+
+.weather__temperature {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.weather__minmax {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.weather__minmax p {
+  margin: 0 1rem;
+}
+
+.weather__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.weather__card {
+  display: flex;
+  align-items: center;
+  background: #444;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.weather__card i {
+  font-size: 1.5rem;
+  color: #00aaff;
+  margin-right: 1rem;
+}
+
+.weather__card p {
+  margin: 0;
+}
+
+.weather__card p:first-child {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .weather__info {
+    grid-template-columns: 1fr;
+  }
+}
